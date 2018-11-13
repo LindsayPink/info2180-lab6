@@ -5,7 +5,7 @@
         <meta charset="utf-8" />
         
         <link rel="stylesheet" type="text/css" media="screen" href="./request.css" />
-        <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Allerta+Stencil|Raleway" rel="stylesheet">
         
         <script src="https://code.jquery.com/jquery-3.1.1.min.js" type="text/javascript"></script>
        	<script src="request.js" type="text/javascript"></script>
@@ -13,8 +13,23 @@
     
     <body>
         <h1>Definition Space</h1>
-        <div>
+        <div id="second">
+            <p id="guide">Lookup the definition of a word (e.g. ajax, bar, css, definition, html, javascript or php)</p>
+            <div id="input">
+                <form>
+                    <input id="text" type="search" placeholder="Enter search term"><br>
+                </form>
+            </div>
+            
             <button id="search">Search</button>
+            
+            <div class="delimiter"></div>
+            
+            <div id="result">
+                <h3 id="term"></h3>
+                <p id="defn"></p>
+                
+            </div>
         </div>
     </body>
     

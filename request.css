@@ -1,19 +1,41 @@
 body {
-    margin-left: 0;
+    margin: auto;
+    width: 800px;
+    background-image: url("https://img.purch.com/w/660/aHR0cDovL3d3dy5saXZlc2NpZW5jZS5jb20vaW1hZ2VzL2kvMDAwLzA5Ny85NTcvb3JpZ2luYWwvc3BhY2UuanBn");
 }
 
 h1 {
+    margin: 0;
     text-align: center;
-    background-color: rgb(0,32,96);
     color: rgb(255,0,255);
-    width: 100%;
     font-family: 'Poiret One', cursive;
-    font-size: 100%;
+    font-size: 50px;
     padding: 20px;
 }
 
+h3 {
+    font-family: 'Allerta Stencil', sans-serif;
+    font-weight: bold;
+}
+
+p {
+    font-family: 'Poiret One', cursive;
+}
+
+#guide {
+    font-family: 'Poiret One', cursive;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+#second {
+    padding-top: 10px;
+    padding-left: 20px;
+    background-color: rgba(254,251,241,0.7);
+}
+
 button {
-    background-color: rgb(0,112,192);
+    background-color: rgb(126,78,117);
     border: none;
     border-radius: 8px;
     padding: 10px;
@@ -23,6 +45,33 @@ button {
 }
 
 button:hover {
-    background-color: #4CAF50;
+    background-color: rgb(220,211,236);
     color: white;
+}
+
+button:focus {
+    outline: none;
+}
+
+#input {
+    display: inline-block;
+}
+
+input {
+    height: 30px;
+    width: 140px;
+}
+
+#result {
+    height: 100px;
+}
+
+.delimiter {
+    background-color: rgb(92,92,92);
+    height: 2px;
+    clear: both;
+    display: block;
+    width: 90%;
+    margin: 20px 5%;
+    
 }
