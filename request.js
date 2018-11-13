@@ -1,7 +1,9 @@
 window.onload = function () {
     "use strict";
     let btn = document.getElementById("search");
+    let allDef = document.getElementById("all");
     btn.addEventListener("click", exec);
+    allDef.addEventListener("click", showAll);
 };
 
 function exec () {
@@ -13,16 +15,8 @@ function exec () {
             httpRequest.onreadystatechange = function() {
                 if (httpRequest.readyState === 4) {
                     if (httpRequest.status === 200) {
-                        let response = (httpRequest.responseText.split("</h3>")); //splits term and term's definition
-                        let div0 = document.createElement("div"); //used to remove html tags from php response
-                        let div1 = document.createElement("div"); //used to remove html tags from php response
-                        div0.setAttribute("id", "r1");
-                        div1.setAttribute("id", "r2");
-                        
-                        div0.innerHTML = response[0]; //used to remove html tags from php response & selecting only the definition
-                        div1.innerHTML = response[1];
-                        document.getElementById("term").innerHTML = div0.innerText;
-                        document.getElementById("defn").innerHTML = div1.innerText;
+                        let response = (httpRequest.responseText);
+                        document.getElementById("result").innerHTML = response;
                     } else {
                         alert("Problem with request. Try again");
                     }
@@ -37,4 +31,8 @@ function exec () {
     else {
         alert("Problem with search. Try again\nEnsure that search bar is not empty.");
     }
+}
+
+function showAll () {
+   
 }
